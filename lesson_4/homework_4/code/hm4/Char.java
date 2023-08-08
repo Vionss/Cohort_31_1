@@ -6,7 +6,7 @@ public class Char {
 
         // task 1
 
-        System.out.println("\u0042");
+        System.out.println("\u0042"); //
 
         int chInt = 'B';
         System.out.println("chInt is "+chInt);
