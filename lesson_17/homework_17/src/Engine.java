@@ -10,7 +10,7 @@ public class Engine {
 
     }
     public String toString(){
-        return "enginePower: "+ enginePower + "\n" + "typeOfEngine: " +typeOfEngine;
+        return "\n"+ "Engine Power: "+ enginePower + "\n" + "Type of engine: " +typeOfEngine;
 
         //В классе Engine добавте методы start и stop. Кадлый из них пусть выводит строку "Engine is started" "Engine is stoped"
     }

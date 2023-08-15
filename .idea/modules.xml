@@ -4,7 +4,15 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lesson_17/code/BankAccount/BankAccount.iml" filepath="$PROJECT_DIR$/lesson_17/code/BankAccount/BankAccount.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cohort31-1.iml" filepath="$PROJECT_DIR$/Cohort31-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_20/dz2/dz2.iml" filepath="$PROJECT_DIR$/lesson_20/dz2/dz2.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_17/homework_17/homework_17.iml" filepath="$PROJECT_DIR$/lesson_17/homework_17/homework_17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_19/homework_19/homework_19.iml" filepath="$PROJECT_DIR$/lesson_19/homework_19/homework_19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_21/homework_21/homework_21.iml" filepath="$PROJECT_DIR$/lesson_21/homework_21/homework_21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_19/lesson_19.iml" filepath="$PROJECT_DIR$/lesson_19/lesson_19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_20/lesson_20.iml" filepath="$PROJECT_DIR$/lesson_20/lesson_20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_21/lesson_21.iml" filepath="$PROJECT_DIR$/lesson_21/lesson_21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_21/singleton/singleton.iml" filepath="$PROJECT_DIR$/lesson_21/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_19/code/student/student.iml" filepath="$PROJECT_DIR$/lesson_19/code/student/student.iml" />
     </modules>
   </component>
 </project>
