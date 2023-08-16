@@ -9,5 +9,4 @@ public class Electronics extends Items {
     public void buy(){
         System.out.println("Thank you for the purchase"+"\n"+"We will also give you 3 years guarantee from our store");
     }
-
 }

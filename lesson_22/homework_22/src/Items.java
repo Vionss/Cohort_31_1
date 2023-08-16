@@ -11,17 +11,13 @@ public class Items {
     public String getNameOfItem() {
         return nameOfItem;
     }
-
     public double getPrice() {
         return price;
     }
     public void delivery(){
     }
     public void guarantee(){
-
     }
     public void buy(){
-
     }
-
 }
