@@ -22,4 +22,7 @@ public class Employee {
     }
     public void writeCode(){
     }
+    public String toString(){
+        return "";
+    }
 }

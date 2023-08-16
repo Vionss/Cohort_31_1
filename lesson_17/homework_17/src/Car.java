@@ -1,4 +1,5 @@
 public class Car {
+
    private String brand;
     String color;
     String licensePlate;
