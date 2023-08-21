@@ -8,6 +8,7 @@ public class UserAppl {
         User user = new User("john@gmail.com","1234");
         System.out.println(user);
         user.setEmail("john@gmx.d.e");
+        user.setPassword("12345!fQ");
         System.out.println(user);
     }
 }

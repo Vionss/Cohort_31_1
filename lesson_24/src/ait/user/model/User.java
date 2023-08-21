@@ -64,7 +64,47 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        if(passwordIsValid(password)) {
+            this.password = password;
+        }else {
+            System.out.println(password + " is not valid");
+        }
+    }
+    /*
+    TODO Homework
+    1) min 8 symbols ---> Done
+    2) Min one symbol in uppercase
+    3) Min one symbol in lowercase
+    4) min one symbol is digit
+    5) min one symbol is special symbol (! % @  * &)
+     */
+    private boolean passwordIsValid(String password) {
+        char currentCharacter;
+        boolean numberPresent = false;
+        boolean upperCasePresent = false;
+        boolean lowerCasePresent = false;
+        boolean specialCharacterPresent = false;
+        String specialChars = "!%@*&";
+
+
+        for (int i = 0; i < password.length(); i++) {
+
+            if(password.length() < 8){
+                return false;
+            }
+            currentCharacter = password.charAt(i);
+            if (Character.isDigit(currentCharacter)) {
+                numberPresent = true;
+            } else if (Character.isUpperCase(currentCharacter)) {
+                upperCasePresent = true;
+            } else if (Character.isLowerCase(currentCharacter)) {
+                lowerCasePresent = true;
+            } else if (specialChars.contains(String.valueOf(currentCharacter))) {
+                specialCharacterPresent = true;
+            }
+        }
+        return
+                numberPresent && upperCasePresent && lowerCasePresent && specialCharacterPresent;
     }
 
     @Override
