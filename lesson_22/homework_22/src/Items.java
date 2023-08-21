@@ -1,5 +1,7 @@
 public class Items {
 
+
+
     private String nameOfItem;
     private double price;
 
@@ -19,5 +21,6 @@ public class Items {
     public void guarantee(){
     }
     public void buy(){
+        System.out.println("Your order: "+ nameOfItem);
     }
 }

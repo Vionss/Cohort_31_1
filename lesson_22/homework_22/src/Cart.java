@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Cart {
         private int size=0;
-        private Items [] arr = new Items[1];
+        private Items [] arr = new Items[2];
 
         public void add (Items element){     ////
             if(size <arr.length) {
@@ -62,5 +62,11 @@ public class Cart {
                 sum+=arr[i].getPrice();
             }
             return sum+"$";
+        }
+
+        public  void placeOrder(){
+            for (int i = 0; i < size; i++) {
+                arr[i].buy();
+            }
         }
 }
