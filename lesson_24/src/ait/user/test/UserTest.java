@@ -28,4 +28,39 @@ class UserTest {
         user.setEmail(invalidEmail);
         assertEquals(email,user.getEmail());
     }
+
+    void testValidPassword(){
+        String validPassword = "qwertY1@";
+        user.setPassword(validPassword);
+        assertEquals(validPassword, user.getPassword());
+
+        }
+    void testPasswordLength() {
+        String invalidPassword = "wertY1@";
+        user.setPassword(invalidPassword);
+        assertEquals(password, user.getPassword());
+    }
+
+    void testPasswordLowercase() {
+        String invalidPassword = "QWERTY1@";
+        user.setPassword(invalidPassword);
+        assertEquals(password, user.getPassword());
+    }
+
+    void testPasswordUppercase() {
+        String invalidPassword = "qwertY1@";
+        user.setPassword(invalidPassword);
+        assertEquals(password, user.getPassword());
+    }
+
+    void testPasswordDigits() {
+        String invalidPassword = "qwertYz@";
+        user.setPassword(invalidPassword);
+        assertEquals(password, user.getPassword());
+    }
+    void testPasswordSpecialSymbols() {
+        String invalidPassword = "qwertY12";
+        user.setPassword(invalidPassword);
+        assertEquals(password, user.getPassword());
+    }
 }

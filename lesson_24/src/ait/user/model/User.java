@@ -79,7 +79,6 @@ public class User {
     5) min one symbol is special symbol (! % @  * &)
      */
     private boolean passwordIsValid(String password) {
-        char currentCharacter;
         boolean numberPresent = false;
         boolean upperCasePresent = false;
         boolean lowerCasePresent = false;
@@ -87,19 +86,20 @@ public class User {
         String specialChars = "!%@*&";
 
 
-        for (int i = 0; i < password.length(); i++) {
+        if(password.length() < 8) {
+            return false;
+        }
 
-            if(password.length() < 8){
-                return false;
-            }
-            currentCharacter = password.charAt(i);
-            if (Character.isDigit(currentCharacter)) {
+        for (int i = 0; i < password.length(); i++) {
+              char c = password.charAt(i);
+
+            if (Character.isDigit(c)) {
                 numberPresent = true;
-            } else if (Character.isUpperCase(currentCharacter)) {
+            } else if (Character.isUpperCase(c)) {
                 upperCasePresent = true;
-            } else if (Character.isLowerCase(currentCharacter)) {
+            } else if (Character.isLowerCase(c)) {
                 lowerCasePresent = true;
-            } else if (specialChars.contains(String.valueOf(currentCharacter))) {
+            } else if (specialChars.contains(String.valueOf(c))) {
                 specialCharacterPresent = true;
             }
         }
