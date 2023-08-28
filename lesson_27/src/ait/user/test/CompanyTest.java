@@ -7,6 +7,7 @@ import ait.employee.model.Employee;
 import ait.employee.model.Manager;
 import ait.employee.model.SalesManager;
 import ait.employee.model.WageEmployee;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,30 +41,58 @@ class CompanyTest {
 
     @org.junit.jupiter.api.Test
     void removeEmployee() {
+       Employee employee = company.removeEmployee(3000);
+       assertEquals(employees[2], employee);
+       assertEquals(3,company.quantity());
+       employee = company.removeEmployee(3000);
+       assertNull(employee);
     }
 
     @org.junit.jupiter.api.Test
     void findEmployee() {
+        Employee employee = company.findEmployee(2000);
+        assertEquals(employees[1], employee);
+        employee = company.findEmployee(5000);
+        assertNull(employee);
     }
 
     @org.junit.jupiter.api.Test
     void quantity() {
+        assertEquals(4, company.quantity());
     }
 
     @org.junit.jupiter.api.Test
     void totalSalary() {
+        assertEquals(11200.0, company.totalSalary(), 0.01);
+
     }
 
     @org.junit.jupiter.api.Test
     void avgSalary() {
+        assertEquals(11200.0 / 4, company.avgSalary(), 0.01);
     }
 
     @org.junit.jupiter.api.Test
     void totalSales() {
+        assertEquals(50_000.0, company.totalSales(), 0.01);
     }
 
     @org.junit.jupiter.api.Test
     void printEmployees() {
         company.printEmployees();
+    }
+
+    @Test
+    void  findEmployeesHoursGreaterThan(){
+        Employee[] actual = company.findEmployeesHoursGreaterThan(100);
+        Employee[] expected = {employees[0],employees[1],employees[2]};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void  findEmployeesSalaryRange(){
+        Employee[] actual = company.findEmployeesSalaryRange(2000,2500);
+        Employee[] expected = {employees[1], employees[2]};
+        assertArrayEquals(expected, actual);
     }
 }
