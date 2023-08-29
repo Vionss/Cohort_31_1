@@ -62,11 +62,6 @@ public class CompanyImpl implements Company {
     }
 
     @Override
-    public double avgSalary() {
-        return totalSalary() / size;
-    }
-
-    @Override
     public double totalSales() {
        double sum = 0;
         for (int i = 0; i < size; i++) {
@@ -87,38 +82,35 @@ public class CompanyImpl implements Company {
 
     @Override
     public Employee[] findEmployeesHoursGreaterThan(int hours) {
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if(employees[i].getHours() >= hours) {
-                count++;
-            }
-        }
-        Employee[] res = new Employee[count];
-        for (int i = 0, j = 0; j < res.length; i++) {
-            if(employees[i].getHours() >= hours){
-                res[j] = employees[i];
-                j++;
-            }
-        }
-        return res;
+        Predicate<Employee> predicate = e -> e.getHours() > hours;
+        return findEmployeesByPredicate(predicate);
+
     }
 
     @Override
     public Employee[] findEmployeesSalaryRange(int minSalary, int maxSalary) {
+        Predicate<Employee> predicate = new Predicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.calcSalary() >= minSalary && employee.calcSalary() < maxSalary;
+            }
+        };
+            return findEmployeesByPredicate(predicate);
+        }
+    private Employee[] findEmployeesByPredicate(Predicate<Employee> predicate){
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if(employees[i].calcSalary() >= minSalary && employees[i].calcSalary() < maxSalary) {
+            if(predicate.test(employees[i])) {
                 count++;
             }
         }
         Employee[] res = new Employee[count];
         for (int i = 0, j = 0; j < res.length; i++) {
-            if(employees[i].calcSalary() >= minSalary && employees[i].calcSalary() < maxSalary){
+            if(predicate.test(employees[i])){
                 res[j] = employees[i];
                 j++;
             }
         }
         return res;
     }
-
 }

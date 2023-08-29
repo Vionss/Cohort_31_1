@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lesson_17/code/BankAccount/BankAccount.iml" filepath="$PROJECT_DIR$/lesson_17/code/BankAccount/BankAccount.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cohort31-1.iml" filepath="$PROJECT_DIR$/Cohort31-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_30_Company_Advance/Homework_30/Homework_30.iml" filepath="$PROJECT_DIR$/lesson_30_Company_Advance/Homework_30/Homework_30.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_22/Inharitance/Inharitance.iml" filepath="$PROJECT_DIR$/lesson_22/Inharitance/Inharitance.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_20/dz2/dz2.iml" filepath="$PROJECT_DIR$/lesson_20/dz2/dz2.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_17/homework_17/homework_17.iml" filepath="$PROJECT_DIR$/lesson_17/homework_17/homework_17.iml" />
@@ -20,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/lesson_26/lesson_26.iml" filepath="$PROJECT_DIR$/lesson_26/lesson_26.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_27/lesson_27.iml" filepath="$PROJECT_DIR$/lesson_27/lesson_27.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_28/lesson_28.iml" filepath="$PROJECT_DIR$/lesson_28/lesson_28.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_30_Company_Advance/lesson_30_Company_Advance.iml" filepath="$PROJECT_DIR$/lesson_30_Company_Advance/lesson_30_Company_Advance.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_24/practicum/practicum.iml" filepath="$PROJECT_DIR$/lesson_24/practicum/practicum.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_21/singleton/singleton.iml" filepath="$PROJECT_DIR$/lesson_21/singleton/singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_19/code/student/student.iml" filepath="$PROJECT_DIR$/lesson_19/code/student/student.iml" />
