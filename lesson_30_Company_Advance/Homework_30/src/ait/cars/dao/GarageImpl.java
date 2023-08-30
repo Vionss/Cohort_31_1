@@ -46,19 +46,7 @@ public class GarageImpl implements Garage {
 
     @Override
     public Car[] findCarsByModel(String model) {
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (model.equals(cars[i].getModel())) {
-                count++;
-            }
-        }
-        Car[] res = new Car[count];
-        for (int i = 0, j = 0; j < res.length; i++) {
-            if (model.equals(cars[i].getModel())) {
-                res[j++] = cars[i];
-            }
-        }
-        return res;
+        return findCarsByPredicate(c -> model.equals(c.getModel()));
     }
 
     @Override
