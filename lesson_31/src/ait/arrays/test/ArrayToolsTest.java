@@ -87,7 +87,7 @@ public class ArrayToolsTest {
     void testSortSoldierByWeight() {
         System.out.println("============testSortSoldierByWeight==========");
         ArrayTools.bubbleSort(soldiers, (s1, s2) -> {
-           double res = s1.getWeight() - s2.getWeight();
+           double res = s1.getWeight();
            if (res < 0){
                return -1;
            }
