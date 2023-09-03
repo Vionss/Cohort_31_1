@@ -17,8 +17,6 @@ public class LibraryImpl implements Library {
         if(book == null || size == books.length || findBookByIsbn(book.getIsbn()) != null){
             return false;
         }
-
-
         books[size] = book;
         size++;
         return false;
