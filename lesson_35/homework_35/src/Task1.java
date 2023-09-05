@@ -20,7 +20,6 @@ public class Task1 {
             numbers.add(3);
             numbers.add(4);
 
-
             numbers2.add(5);
             numbers2.add(2);
             numbers2.add(3);
