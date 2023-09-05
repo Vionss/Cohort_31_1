@@ -75,6 +75,7 @@ public class Main {
         System.out.println(position);
 
         // boolean contains(Object o) - проверяет содержит ли лист данный элемент
+        System.out.println(" boolean contains(Object o) - проверяет содержит ли лист данный элемент");
         System.out.println(names.contains("Jack"));
         System.out.println(names.contains("Bill"));
 
@@ -95,7 +96,7 @@ public class Main {
 
         // Итератор
         /*
-        Iterator - один из методов интерфейса Сollection. Он возвразает обект,
+        Iterator - один из методов интерфейса Сollection. Он возвращает обэкт,
         реализующий интерфейс Iterator
 
         методы интерфейса итератор:
