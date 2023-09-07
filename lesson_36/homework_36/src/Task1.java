@@ -9,18 +9,26 @@ public class Task1 {
     // которая встречается раньше в листе -
     // самую короткую или самую длинную. Все строки в листе разной длины
 
-    public static void main(String[] args) {
-        List<String > list1 = Arrays.asList("aaa","c","sdsd","ddddd");
+    public String findShortestOrLongest(List<String> list) {
+        //List<String> list1 = Arrays.asList("aaa", "c", "sdsd", "ddddd");
 
-        System.out.println(Collections.max(list1));
-        System.out.println(Collections.min(list1));
+        String minSizeElement = list.get(0);
+        int indexMinElement = 0;
+        String maxSizeElement = list.get(0);
+        int indexMaxElement = 0;
 
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).length() < minSizeElement.length()){
+                minSizeElement = list.get(i);
+                indexMinElement = i;
+            }else if (list.get(i).length() > maxSizeElement.length()){
+                maxSizeElement = list.get(i);
+                indexMaxElement = i;
+            }
+        }
+        if(indexMinElement < indexMaxElement){
+            return minSizeElement;
+        }
+        return maxSizeElement;
     }
-
-
-//    public List<String> firstString(List<String> list){
-//        List<String> resultFirstString = Arrays.asList("aaa","c","sdsd","ddddd");
-//
-//        }
-//    }
 }
