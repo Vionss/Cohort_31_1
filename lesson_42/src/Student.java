@@ -4,9 +4,9 @@ public class Student {
     private String name;
     private int lessons;
 
-    public Student(String name, int id) {
+    public Student(String name, int lessons) {
         this.name = name;
-        this.lessons = id;
+        this.lessons = lessons;
     }
 
     @Override
