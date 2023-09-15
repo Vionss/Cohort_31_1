@@ -1,6 +1,5 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.format.SignStyle;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,26 +8,39 @@ public class Main {
         // а значением, список слов начинающихся на эту букву
 
 
-//        System.out.println(listHandler("Hello i am daun", "e"));
-//    }
-//
-//
-//    public static Map<String, List<String>> listHandler(String str, String firstLetter) {
-//        Map<String, List<String>> result = new HashMap<>();
-//
-//        String[] words = str.split("\\s");
-//        for (String subStr : words) {
-//            System.out.println(subStr);
-//            return result;
-//        }
-//        return result;
-//    }
+        String text = "hashCode method is used to get the hash code of an object "
+                + "hashCode method of the object class returns the memory reference of an object in integer form "
+                + "Definition of hashCode method is public native hashCode It indicates the implementation "
+                + "of hashCode is native because there is not any direct method in java to fetch the reference "
+                + "of the object It is possible to provide your implementation of hashCode"
+                + "In HashMap hashCode is used to calculate the bucket and therefore calculate the index";
 
-        String str = "разбить строку на слова";
-        String[] words = str.split("\\s"); // Разбиение строки на слова с помощью разграничителя (пробел)
-        // Вывод на экран
-        for(String subStr:words) {
-            System.out.println(subStr);
+        List<String> words = stringToListWords(text);
+        System.out.println(collectionHandler(removeDuplicates(words)));
+    }
+
+    public static Set<String> removeDuplicates(Collection<String> collection){
+        return new HashSet<>(collection);
+    }
+    public static List<String> stringToListWords(String text){
+        if(text == null) return Collections.emptyList();
+       return Arrays.asList(text.split(" "));
+    }
+
+    public static String textPreHandler(String text){
+        return text.toLowerCase();
+    }
+
+    public static Map<Character, List<String>> collectionHandler(Collection<String> collection){
+        Map<Character, List<String>> result = new HashMap<>();
+        if(collection == null) return result;
+
+        for(String str : collection){
+            Character key = str.charAt(0);
+            result.putIfAbsent(key, new ArrayList<>()); // если не было еще такого ключа, положить етот ключ в новий лист
+            result.get(key).add(str);
+
         }
+        return result;
     }
 }
