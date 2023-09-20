@@ -22,12 +22,12 @@ public class hm_5 {
         */
 
         int a, b;
-        a = 4;
-        b = 3;
+        a = 1;
+        b = 9;
 
         boolean var_boolean = a == 10  || b == 10 || a + b  == 10;
 
-        System.out.println( var_boolean);
+        System.out.println(var_boolean);
 
     }
 
