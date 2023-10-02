@@ -34,7 +34,7 @@ public class Main {
 
     }
 
-    public static void write (byte[] arr){
+    public static void write (byte[] arr) throws FileNotFoundException {
         FileType fileType = getFileType(arr);
         String name="pic";
         if(fileType == FileType.CLAS){
@@ -43,6 +43,8 @@ public class Main {
         name = name+fileType.getExtension();
        try (BufferedOutputStream is = new BufferedOutputStream(new FileOutputStream(name))){
 
+       } catch (IOException e) {
+           throw new RuntimeException(e);
        }
 
     }
