@@ -55,7 +55,7 @@ public class ForEach {
         }
         System.out.println("Факториал числа " + f + " = " + result);
 
-        Celcius();
+        Celsius();
 
 
         // task 3
@@ -68,7 +68,7 @@ public class ForEach {
     }
 
 
-    static void Celcius(){
+    static void Celsius(){
 
         Scanner scanner = new Scanner(System.in);
 

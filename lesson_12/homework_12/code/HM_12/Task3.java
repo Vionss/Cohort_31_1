@@ -9,7 +9,7 @@ public class Task3 {
         //В методе main() вывести получившийся результат на экран
 
         int [] mass = {123,634,53,72,12,56,82,};
-        System.out.println(searchNumber(mass,11,4));
+        System.out.println(searchNumber(mass,12,4));
 
     }
     //---Methods---

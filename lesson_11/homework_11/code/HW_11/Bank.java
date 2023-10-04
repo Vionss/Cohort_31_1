@@ -9,7 +9,7 @@ public class Bank {
         double[] randomMoney = new double[20];
 
         for (int i = 0; i < randomMoney.length; i++) {
-            randomMoney[i] = random.nextDouble(10000,100000000);
+            randomMoney[i] = random.nextInt(10000,100000000);
             System.out.printf("%.2f %n" , randomMoney[i]);
 
         }

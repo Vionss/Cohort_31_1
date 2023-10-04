@@ -6,7 +6,7 @@ public class Task3 {
     public static void main(String[] args) {
 
         System.out.println("Print all dividers");
-        System.out.println(Arrays.toString(findAllDividers(9)));
+        System.out.println(Arrays.toString(findAllDividers(125)));
 
     }
     // ====Methods===
@@ -17,11 +17,8 @@ public class Task3 {
         for (int i = 1; i <= n; i++) {
             if (n % i == 0){
                 counter++;
-                System.out.print(i+ " ");
             }
         }
-        System.out.println();
-
         int[]diveiders = new int[counter];
 
         int index = 0;
